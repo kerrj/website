@@ -124,8 +124,7 @@
             </video>
 
 
-
-            <div class="base-row">
+            <div class="base-row add-top-padding">
                 <h1 id="abstract">Overview</h1>
                 <p class="paragraph">
                     <!-- &emsp; -->
@@ -143,30 +142,45 @@
                 </p>
             </div>
 
-            <div class="base-row">
-                <h1 id="abstract">Interacting with LERF on hand-captured scenes</h1>
-                <p class="paragraph-center">
-                    Click on the thumbnails below to load a scene, and use ON/OFF to toggle between RGB and 3D relevancy videos.
-                </p>
+            <div class="base-row add-top-padding">
+                <!-- <h1 id="abstract">Interacting with LERF on hand-captured scenes</h1> -->
+                <h1 class="tldr">
+                    <b>Click the thumbnails below to load scenes, use ON/OFF to toggle between RGB and 3D relevancy videos.</b>
+                </h1>
             </div>
 
-
-            <video id="bouquet" src="data/playback/bouquet_concat.mp4" class="videos" controls="false" loop autoplay
-                muted></video>
-            <video id="figurines" src="data/playback/figurines_concat.mp4" class="videos" controls="false" loop
-                muted></video>
-            <video id="kitchen" src="data/playback/kitchen_concat.mp4" class="videos" controls="false" loop
-                muted></video>
-            <video id="donuts" src="data/playback/donuts_concat.mp4" class="videos" controls="false" loop muted></video>
-            <video id="teatime" src="data/playback/teatime_concat.mp4" class="videos" controls="false" loop
-                muted></video>
-            <video id="bookstore" src="data/playback/bookstore_concat.mp4" class="videos" controls="false" loop
-                muted></video>
-            <video id="grocery" src="data/playback/veggieaisle_concat.mp4" class="videos" controls="false" loop>
+            <video id="bouquet" style="display: none" controls="false" loop autoplay muted>
+                <source src="data/playback_webm/bouquet_concat.mp4" type="video/webm">
+                <source src="data/playback/bouquet_concat.mp4" type="video/mp4">
             </video>
-            <video id="garden" src="data/playback/sunnyside_concat.mp4" class="videos" controls="false" loop muted>
+            <video id="figurines" style="display: none" controls="false" loop muted>
+                <source src="data/playback_webm/figurines_concat.mp4" type="video/webm">
+                <source src="data/playback/figurines_concat.mp4" type="video/mp4">
             </video>
-            <video id="shoes" src="data/playback/shoerack_concat.mp4" class="videos" controls="false" loop muted>
+            <video id="kitchen" style="display: none" controls="false" loop muted>
+                <source src="data/playback_webm/kitchen_concat.mp4" type="video/webm">
+                <source src="data/playback/kitchen_concat.mp4" type="video/mp4">
+            </video>
+            <video id="donuts" style="display: none" controls="false" loop muted>
+                <source src="data/playback_webm/donuts_concat.mp4" type="video/webm">
+                <source src="data/playback/donuts_concat.mp4" type="video/mp4">
+            </video>
+            <video id="teatime" style="display: none" controls="false" loop muted>
+                <source src="data/playback_webm/teatime_concat.mp4" type="video/webm">
+                <source src="data/playback/teatime_concat.mp4" type="video/mp4">
+            </video>
+            <video id="bookstore" style="display: none" controls="false" loop muted>
+                <source src="data/playback_webm/bookstore_concat.mp4" type="video/webm">
+                <source src="data/playback/bookstore_concat.mp4" type="video/mp4">
+            </video>
+            <video id="grocery" class="videos" controls="false" loop>
+                <source src="data/playback/veggieaisle_concat.mp4" type="video/mp4">
+            </video>
+            <video id="garden" class="videos" controls="false" loop muted>
+                <source src="data/playback/sunnyside_concat.mp4" type="video/mp4">
+            </video>
+            <video id="shoes" class="videos" controls="false" loop muted>
+                <source src="data/playback/shoerack_concat.mp4" type="video/mp4">
             </video>
 
             <div id="main-results" onclick="play_pause()">
@@ -253,22 +267,19 @@
                 </div>
                 <div class="base-col thumbnail-col">
                     <button class="thumbnail-btn" id="thumb-6">
-                        <!-- TODO -->
-                        <img src="data/thumbnails/bookstore_thumbnail.jpg" alt="paper" class="thumbnails" />
+                        <img src="data/thumbnails/grocery_thumbnail.jpg" alt="paper" class="thumbnails" />
                         Grocery
                     </button>
                 </div>
                 <div class="base-col thumbnail-col">
                     <button class="thumbnail-btn" id="thumb-7">
-                        <!-- TODO -->
-                        <img src="data/thumbnails/bookstore_thumbnail.jpg" alt="paper" class="thumbnails" />
+                        <img src="data/thumbnails/sunnyside_thumbnail.jpg" alt="paper" class="thumbnails" />
                         Garden
                     </button>
                 </div>
                 <div class="base-col thumbnail-col">
                     <button class="thumbnail-btn" id="thumb-8">
-                        <!-- TODO -->
-                        <img src="data/thumbnails/bookstore_thumbnail.jpg" alt="paper" class="thumbnails" />
+                        <img src="data/thumbnails/shoerack_thumbnail.jpg" alt="paper" class="thumbnails" />
                         Shoes
                     </button>
                 </div>
@@ -358,10 +369,10 @@
                 <img id="why-lerf-img" src="data/2d-3d-lerf-vert.jpg" />
             </div>
 
-            <div class="base-row">
+            <div class="base-row add-top-padding">
                 <h1 id="abstract">Multi-scale supervision</h1>
                 <p class="paragraph">
-                    &emsp; To supervise language embeddings, we pre-compute an image pyramids of CLIP features for each
+                    To supervise language embeddings, we pre-compute an image pyramids of CLIP features for each
                     training view.
                     Then, each sampled ray during optimization is supervised by interpolating the CLIP embedding within
                     this pyramid.
@@ -370,7 +381,7 @@
 
             <img id="clip-img" src="data/clip_features.svg" />
             <img id="main-img" src="data/multi_scale_compare.jpg" />
-            <div class="base-row">
+            <div class="base-row add-top-padding">
                 <h1 id="abstract">DINO Regularization</h1>
                 <p class="paragraph">
                     Inspired by <a href="https://pfnet-research.github.io/distilled-feature-fields/">Distilled Feature
@@ -383,7 +394,7 @@
 
             <img id="main-img" src="data/dino_compare.jpg" />
 
-            <div class="base-row">
+            <div class="base-row add-top-padding">
                 <img src="data/nerfstudio_logo.png" alt="Nerfstudio" style="height: 5em; margin-top:2em" />
                 <h1 id="abstract">
                     <a id="coming_soon">Integration Coming Soon...</a>
@@ -404,9 +415,10 @@
             </video>
 
             <!-- <div class="highlight-none notranslate"><div class="highlight"><pre id="codecell0"><span></span>@article{nerfstudio, -->
-            <div class="citation">
-                <h1 id="abstract"> Citation </h1>
-                <pre id="codecell0">@article{TODO,
+            <div class="citation add-top-padding">
+            <h1 id="abstract"> Citation </h1>
+            <p> If you use this work or find it helpful, please consider citing: (bibtex) </p>
+            <pre id="codecell0">@article{TODO,
 &nbsp;author = {Kerr, Justin and Kim, Chung Min and Goldberg, Ken and Kanazawa, Angjoo and Tancik, Matthew},
 &nbsp;title = {LERF: Language Embedded Radiance Fields},
 &nbsp;journal = {arXiv preprint arXiv:TODO},

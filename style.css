@@ -181,6 +181,7 @@ body {
     width: 60%;
     max-width: 560px;
     margin-top: 30px;
+    margin-right: 20px;
     margin-bottom: 10px;
 }
 #why-lerf-img {
@@ -188,6 +189,7 @@ body {
     max-width: 560px;
     margin-top: 30px;
     margin-bottom: 10px;
+    margin-left: 20px;
 }
 #why-lerf{
     margin-top: 30px;
@@ -305,7 +307,7 @@ body {
 
 #main-results {
     width: 100%;
-    margin-top: 30px;
+    /* margin-top: 30px; */
     margin-bottom: 0px;
     text-align: center;
     background-color: white;
@@ -489,6 +491,10 @@ input:checked + .slider:before {
     padding: 10px;
 }
 
+.citation > p {
+    margin-left: 20px;
+}
+
 #codecell0 {
     margin-bottom: 10px;
     margin-left: 10px;
@@ -533,3 +539,7 @@ input:checked + .slider:before {
     padding-left: .55rem;
     border-radius: 2rem 2rem 2rem 2rem;
   }
+
+.add-top-padding{
+    margin-top: 30px;
+}
