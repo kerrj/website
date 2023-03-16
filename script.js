@@ -48,7 +48,7 @@ $(function() {
       video = videos[current_video_idx]
       ctx.drawImage(video, 0, 0, 960, 540, 0, 0, video_width, video_width/VIDEO_ASPECT_RATIO);
       ctx_overlay.drawImage(video, 960, 0, 960, 540, 0, 0, video_width, video_width/VIDEO_ASPECT_RATIO);
-      setTimeout(loop, 1000 / 30); // drawing at 30fps
+      setTimeout(loop, 1000 / 60); // drawing at 30fps
       set_play_pause_icon();
     })();
 
