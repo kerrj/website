@@ -164,6 +164,7 @@ function resize_canvas() {
 
   main_results.style.height = height;
 
+  video_width = width;
   canvas.width = width;
   canvas.height = height;
   canvas.style.width = width;
