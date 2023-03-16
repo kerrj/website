@@ -115,7 +115,8 @@
             <h1 class="tldr">
                 <b>TL;DR</b>:
                 <!-- LERFs ground language embeddings from off-the-shelf models like CLIP into a NeRF, which enables open-ended language queries in 3D. -->
-                Grounding CLIP vectors volumetrically inside a NeRF allows flexible natural language queries
+                <!-- Grounding CLIP vectors volumetrically inside a NeRF allows flexible natural language queries -->
+                Grounding CLIP vectors volumetrically inside a NeRF allows flexible natural language queries in 3D
                 <!-- Enable natural language queries within a NeRF by densely embedding CLIP vectors inside -->
             </h1>
             <video id="main-video" autobuffer muted autoplay loop controls>
@@ -127,15 +128,25 @@
             <div class="base-row">
                 <h1 id="abstract">Overview</h1>
                 <p class="paragraph">
-                    &emsp;
-                    LERF learns a dense, multi-scale language field by volume rendering CLIP
+                    <!-- &emsp; -->
+                    LERF optimizes a dense, multi-scale language 3D field by volume rendering CLIP embeddings along
+                    training rays, supervising these embeddings with multi-scale CLIP features across multi-view
+                    training images.
+                    <!-- LERF optimizes a dense, multi-scale language field by volume rendering CLIP
                     embeddings along training rays,
-                    supervising these embeddings across training views to provide multi-view consistency. After
-                    optimization,
+                    supervising these embeddings across training views to provide multi-view consistency.  -->
+                    After optimization,
                     LERF can extract 3D relevancy maps for language queries interactively in real-time.
                     LERF enables <b>pixel-aligned</b> queries of the distilled 3D CLIP embeddings <b>without relying on
                         region proposals, masks, or fine-tuning</b>,
                     supporting long-tail open-vocabulary queries hierarchically across the volume.
+                </p>
+            </div>
+
+            <div class="base-row">
+                <h1 id="abstract">Interacting with LERF on hand-captured scenes</h1>
+                <p class="paragraph">
+                    Use ON/OFF to toggle between RGB renders and 3D relevancy maps!
                 </p>
             </div>
 
@@ -267,4 +278,15 @@
             <video id="main-video" muted loop controls>
                 <source id="mp4" src="data/lerf_interaction.mp4" type="video/mp4">
             </video>
+
+            <!-- <div class="highlight-none notranslate"><div class="highlight"><pre id="codecell0"><span></span>@article{nerfstudio, -->
+            <div class="citation">
+            <h1 id="abstract"> Citation </h1>
+            <pre id="codecell0">@article{TODO,
+&nbsp;author = {Kerr, Justin and Kim, Chung Min and Goldberg, Ken and Tancik, Matthew and Kanazawa, Angjoo},
+&nbsp;title = {LERF: Language Embedded Radiance Fields},
+&nbsp;journal = {arXiv preprint arXiv:TODO},
+&nbsp;year = {2023},
+} </pre>
+            </div>
 </body>

@@ -3,8 +3,8 @@ var video_names = ['bouquet','figurines','kitchen', 'donuts', 'teatime', 'bookst
 var download_paths = [
   'data/high_res/bouquet.mp4',
   'data/high_res/figurines.mp4',
-  'data/high_res/bouquet.mp4', 
   'data/high_res/kitchen.mp4', 
+  'data/high_res/donuts.mp4', 
   'data/high_res/teatime.mp4',
   'data/high_res/bookstore.mp4'
 ];
@@ -81,7 +81,7 @@ function download() {
   current_video = videos[current_video_idx]
   var link = document.createElement('a');
   link.download = video_names[current_video_idx] + '.mp4';
-  link.href = current_video.src;
+  link.href = download_paths[current_video_idx];
   link.click();
 }
 
