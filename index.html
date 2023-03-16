@@ -145,44 +145,9 @@
 
             <div class="base-row">
                 <h1 id="abstract">Interacting with LERF on hand-captured scenes</h1>
-                <p class="paragraph">
-                    Use ON/OFF to toggle between RGB renders and 3D relevancy maps!
+                <p class="paragraph-center">
+                    Click on the thumbnails below to load a scene, and use ON/OFF to toggle between RGB renders and 3D relevancy maps.
                 </p>
-            </div>
-
-            <video id="bouquet" src="data/playback/bouquet_concat.mp4" style="display: none" controls="false" loop
-                autoplay muted></video>
-            <video id="figurines" src="data/playback/figurines_concat.mp4" style="display: none" controls="false" loop
-                muted></video>
-            <video id="kitchen" src="data/playback/kitchen_concat.mp4" style="display: none" controls="false" loop
-                muted></video>
-            <video id="donuts" src="data/playback/donuts_concat.mp4" style="display: none" controls="false" loop
-                muted></video>
-            <video id="teatime" src="data/playback/teatime_concat.mp4" style="display: none" controls="false" loop
-                muted></video>
-            <video id="bookstore" src="data/playback/bookstore_concat.mp4" style="display: none" controls="false" loop
-                muted></video>
-
-            <div id="main-results" onclick="play_pause()">
-                <canvas id="canvas" width="960px" height="540px"></canvas>
-                <canvas id="canvas-overlay" width="960px" height="540px"></canvas>
-            </div>
-
-            <div class="video-bar">
-                <div id="opacity-col" class="base-col viewer-bar">
-                    <label class="switch">
-                        <input type="checkbox" id="opacity-toggle" checked>
-                        <span class="slider"></span>
-                        <span class="labels" data-on="ON" data-off="OFF"></span>
-                    </label>
-                </div>
-                <div class="base-col viewer-bar">
-                    <button id="play-btn" class="video-btn fa fa-lg fa-pause" onclick="play_pause()"></button>
-                </div>
-                <div class="base-col viewer-bar video-export">
-                    <button class="video-btn fa fa-arrows-alt fa-lg" onclick="fullscreen()"></button>
-                    <button class="video-btn fa fa-download fa-lg" onclick="download()"></button>
-                </div>
             </div>
 
             <div class="base-row thumbnail-row">
@@ -224,6 +189,48 @@
                 </div>
             </div>
 
+            <video id="bouquet" src="data/playback/bouquet_concat.mp4" style="display: none" controls="false" loop
+                autoplay muted></video>
+            <video id="figurines" src="data/playback/figurines_concat.mp4" style="display: none" controls="false" loop
+                muted></video>
+            <video id="kitchen" src="data/playback/kitchen_concat.mp4" style="display: none" controls="false" loop
+                muted></video>
+            <video id="donuts" src="data/playback/donuts_concat.mp4" style="display: none" controls="false" loop
+                muted></video>
+            <video id="teatime" src="data/playback/teatime_concat.mp4" style="display: none" controls="false" loop
+                muted></video>
+            <video id="bookstore" src="data/playback/bookstore_concat.mp4" style="display: none" controls="false" loop
+                muted></video>
+
+            <div id="main-results" onclick="play_pause()">
+                <canvas id="canvas" width="960px" height="540px"></canvas>
+                <canvas id="canvas-overlay" width="960px" height="540px"></canvas>
+            </div>
+
+            <div class="video-bar">
+                <div id="opacity-col" class="base-col viewer-bar">
+                    <label class="switch">
+                        <input type="checkbox" id="opacity-toggle" checked>
+                        <span class="slider"></span>
+                        <span class="labels" data-on="ON" data-off="OFF"></span>
+                    </label>
+                </div>
+                <div class="base-col viewer-bar">
+                    <button id="play-btn" class="video-btn fa fa-lg fa-pause" onclick="play_pause()"></button>
+                </div>
+                <div class="base-col viewer-bar video-export">
+                    <button class="video-btn fa fa-arrows-alt fa-lg" onclick="fullscreen()"></button>
+                    <button class="video-btn fa fa-download fa-lg" onclick="download()"></button>
+                </div>
+            </div>
+
+            <!-- <div class="base-row">
+                <h1 id="abstract">Interacting with LERF on hand-captured scenes</h1>
+                <p class="paragraph-center">
+                    Use ON/OFF to toggle between RGB renders and 3D relevancy maps!
+                </p>
+            </div> -->
+
             <!-- <video id="main-video" autobuffer muted autoplay loop controls>
                 <source id="mp4" src="data/grid.mp4" type="video/mp4">
             </video> -->
@@ -232,7 +239,25 @@
                 <canvas id="canvas"></canvas>
                 <canvas id="canvas-overlay"></canvas>
             </div>
-            <img id="pipeline-img" src="data/nerf_render.svg" />
+
+            <video id="addtl-video" autobuffer muted autoplay loop controls>
+                <source id="mp4" src="data/playback/veggieaisle_concat.mp4" type="video/mp4">
+            </video>
+            <video id="addtl-video" autobuffer muted autoplay loop controls>
+                <source id="mp4" src="data/playback/sunnyside_concat.mp4" type="video/mp4">
+            </video>
+            <video id="addtl-video" autobuffer muted autoplay loop controls>
+                <source id="mp4" src="data/playback/shoerack_concat.mp4" type="video/mp4">
+            </video>
+
+            <div id="why-lerf">
+                <h1 id="abstract"> Why 3D CLIP embeddings?</h1>
+                <p class="paragraph">
+s;ldkfja;sldkfja;sldkfj;asldkfja;sldkf;aslkdf
+                </p>
+                <img id="pipeline-img" src="data/nerf_render.svg" />
+                <img id="why-lerf-img" src="data/2d-3d-lerf-vert.jpg" />
+            </div>
 
             <div class="base-row">
                 <h1 id="abstract">Multi-scale supervision</h1>
@@ -283,7 +308,7 @@
             <div class="citation">
             <h1 id="abstract"> Citation </h1>
             <pre id="codecell0">@article{TODO,
-&nbsp;author = {Kerr, Justin and Kim, Chung Min and Goldberg, Ken and Tancik, Matthew and Kanazawa, Angjoo},
+&nbsp;author = {Kerr, Justin and Kim, Chung Min and Goldberg, Ken and Kanazawa, Angjoo and Tancik, Matthew},
 &nbsp;title = {LERF: Language Embedded Radiance Fields},
 &nbsp;journal = {arXiv preprint arXiv:TODO},
 &nbsp;year = {2023},
