@@ -201,18 +201,10 @@ window.onload = function() {
 
   const hoverImage = document.getElementById('hover-image');
   const gptQueries = document.querySelectorAll('.gpt-query');
-  console.log(gptQueries)
 
   gptQueries.forEach(query => {
     query.addEventListener('mouseover', () => {
-      console.log(query.id)
-      // const color = query.style.backgroundColor;
-      if (query.id == "gpt-paper") {
-        hoverImage.src = 'data/gpt_example/test_1.jpg';
-      } else {
-        hoverImage.src = 'data/gpt_example/test_2.jpg';
-      }
-      
+      hoverImage.src = 'data/gpt_example/' + query.id + '.jpg';
     });
     query.addEventListener('mouseout', () => {
       hoverImage.src = 'data/gpt_example/base.jpg';
