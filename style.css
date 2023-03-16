@@ -533,3 +533,23 @@ input:checked + .slider:before {
     padding-left: .55rem;
     border-radius: 2rem 2rem 2rem 2rem;
   }
+
+  #gpt-word-col {
+    position: relative;
+    float: left;
+    width: 20%;
+  }
+
+  #gpt-img-col {
+    position: relative;
+    float: left;
+    width: 80%;
+  }
+
+  .gpt-query {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    border:1px solid #ffffff;
+  }
