@@ -151,44 +151,6 @@
                 </p>
             </div>
 
-            <div class="base-row thumbnail-row">
-                <div class="base-col thumbnail-col">
-                    <button class="thumbnail-btn" id="thumb-0">
-                        <img src="data/thumbnails/bouquet_thumbnail.jpg" alt="paper" class="thumbnails" />
-                        Bouquet
-                    </button>
-                </div>
-                <div class="base-col thumbnail-col">
-                    <button class="thumbnail-btn" id="thumb-1">
-                        <img src="data/thumbnails/figurines_thumbnail.jpg" alt="paper" class="thumbnails" />
-                        Figurines
-                    </button>
-                </div>
-                <div class="base-col thumbnail-col">
-                    <button class="thumbnail-btn" id="thumb-2">
-                        <img src="data/thumbnails/kitchen_thumbnail.jpg" alt="paper" class="thumbnails" />
-                        Kitchen
-                    </button>
-                </div>
-                <div class="base-col thumbnail-col">
-                    <button class="thumbnail-btn" id="thumb-3">
-                        <img src="data/thumbnails/donuts_thumbnail.jpg" alt="paper" class="thumbnails" />
-                        Donuts
-                    </button>
-                </div>
-                <div class="base-col thumbnail-col">
-                    <button class="thumbnail-btn" id="thumb-4">
-                        <img src="data/thumbnails/teatime_thumbnail.jpg" alt="paper" class="thumbnails" />
-                        Teatime
-                    </button>
-                </div>
-                <div class="base-col thumbnail-col">
-                    <button class="thumbnail-btn" id="thumb-5">
-                        <img src="data/thumbnails/bookstore_thumbnail.jpg" alt="paper" class="thumbnails" />
-                        Bookstore
-                    </button>
-                </div>
-            </div>
 
             <video id="bouquet" src="data/playback/bouquet_concat.mp4" class="videos" controls="false" loop autoplay
                 muted></video>
@@ -201,6 +163,12 @@
                 muted></video>
             <video id="bookstore" src="data/playback/bookstore_concat.mp4" class="videos" controls="false" loop
                 muted></video>
+            <video id="grocery" src="data/playback/veggieaisle_concat.mp4" class="videos" controls="false" loop>
+            </video>
+            <video id="garden" src="data/playback/sunnyside_concat.mp4" class="videos" controls="false" loop muted>
+            </video>
+            <video id="shoes" src="data/playback/shoerack_concat.mp4" class="videos" controls="false" loop muted>
+            </video>
 
             <div id="main-results" onclick="play_pause()">
                 <canvas id="canvas" width="960px" height="540px"></canvas>
@@ -240,15 +208,72 @@
                 <canvas id="canvas-overlay"></canvas>
             </div>
 
-            <video id="addtl-video" autobuffer muted autoplay loop controls>
-                <source id="mp4" src="data/playback/veggieaisle_concat.mp4" type="video/mp4">
-            </video>
-            <video id="addtl-video" autobuffer muted autoplay loop controls>
-                <source id="mp4" src="data/playback/sunnyside_concat.mp4" type="video/mp4">
-            </video>
-            <video id="addtl-video" autobuffer muted autoplay loop controls>
-                <source id="mp4" src="data/playback/shoerack_concat.mp4" type="video/mp4">
-            </video>
+            <button class="slide-arrow" id="slide-arrow-prev" onclick="slide_left()">
+                &#8249;
+            </button>
+            <button class="slide-arrow" id="slide-arrow-next" onclick="slide_right()">
+                &#8250;
+            </button>
+
+            <div class="base-row thumbnail-row" , id="thumbnails-scroll">
+                <div class="base-col thumbnail-col">
+                    <button class="thumbnail-btn" id="thumb-0">
+                        <img src="data/thumbnails/bouquet_thumbnail.jpg" alt="paper" class="thumbnails" />
+                        Bouquet
+                    </button>
+                </div>
+                <div class="base-col thumbnail-col">
+                    <button class="thumbnail-btn" id="thumb-1">
+                        <img src="data/thumbnails/figurines_thumbnail.jpg" alt="paper" class="thumbnails" />
+                        Figurines
+                    </button>
+                </div>
+                <div class="base-col thumbnail-col">
+                    <button class="thumbnail-btn" id="thumb-2">
+                        <img src="data/thumbnails/kitchen_thumbnail.jpg" alt="paper" class="thumbnails" />
+                        Kitchen
+                    </button>
+                </div>
+                <div class="base-col thumbnail-col">
+                    <button class="thumbnail-btn" id="thumb-3">
+                        <img src="data/thumbnails/donuts_thumbnail.jpg" alt="paper" class="thumbnails" />
+                        Donuts
+                    </button>
+                </div>
+                <div class="base-col thumbnail-col">
+                    <button class="thumbnail-btn" id="thumb-4">
+                        <img src="data/thumbnails/teatime_thumbnail.jpg" alt="paper" class="thumbnails" />
+                        Teatime
+                    </button>
+                </div>
+                <div class="base-col thumbnail-col">
+                    <button class="thumbnail-btn" id="thumb-5">
+                        <img src="data/thumbnails/bookstore_thumbnail.jpg" alt="paper" class="thumbnails" />
+                        Bookstore
+                    </button>
+                </div>
+                <div class="base-col thumbnail-col">
+                    <button class="thumbnail-btn" id="thumb-6">
+                        <!-- TODO -->
+                        <img src="data/thumbnails/bookstore_thumbnail.jpg" alt="paper" class="thumbnails" />
+                        Grocery
+                    </button>
+                </div>
+                <div class="base-col thumbnail-col">
+                    <button class="thumbnail-btn" id="thumb-7">
+                        <!-- TODO -->
+                        <img src="data/thumbnails/bookstore_thumbnail.jpg" alt="paper" class="thumbnails" />
+                        Garden
+                    </button>
+                </div>
+                <div class="base-col thumbnail-col">
+                    <button class="thumbnail-btn" id="thumb-8">
+                        <!-- TODO -->
+                        <img src="data/thumbnails/bookstore_thumbnail.jpg" alt="paper" class="thumbnails" />
+                        Shoes
+                    </button>
+                </div>
+            </div>
 
             <div id="why-lerf">
                 <h1 id="abstract"> Why 3D CLIP embeddings?</h1>
