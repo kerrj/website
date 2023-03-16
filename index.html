@@ -41,9 +41,10 @@
 <body>
     <div class="section">
         <div class="container">
-            <h1 class="title">LERF</h1>
-            <h1 class="subheader">Language Embedded Radiance Fields</h1>
-            
+            <div class="title-row">
+                <h1 class="title">LERF</h1>
+                <h1 class="subheader"> 📎 Language Embedded Radiance Fields 🚜</h1>
+            </div>
             <div class="base-row author-row">
                 <div class="base-col author-col">
                     <a href="https://kerrj.github.io/" target="_blank" class="author-text">
@@ -148,11 +149,8 @@
                 muted></video>
             <video id="teatime" src="data/playback/teatime_concat.mp4" style="display: none" controls="false" loop
                 muted></video>
-            <video id="video-toycar2" src="https://dorverbin.github.io/refnerf/video/toycar.mp4" style="display: none"
-                controls="false" autoplay loop muted></video>
-
-
-
+            <video id="bookstore" src="data/playback/bookstore_concat.mp4" style="display: none" controls="false" loop
+                muted></video>
 
             <div id="main-results" onclick="play_pause()">
                 <canvas id="canvas" width="960px" height="540px"></canvas>
@@ -207,7 +205,17 @@
                         Teatime
                     </button>
                 </div>
+                <div class="base-col thumbnail-col">
+                    <button class="thumbnail-btn" id="thumb-5">
+                        <img src="data/thumbnails/bookstore_thumbnail.jpg" alt="paper" class="thumbnails" />
+                        Bookstore
+                    </button>
+                </div>
             </div>
+
+            <!-- <video id="main-video" autobuffer muted autoplay loop controls>
+                <source id="mp4" src="data/grid.mp4" type="video/mp4">
+            </video> -->
 
             <div id="main-results" onclick="play_pause()">
                 <canvas id="canvas"></canvas>
@@ -230,53 +238,14 @@
             <div class="base-row">
                 <h1 id="abstract">DINO Regularization</h1>
                 <p class="paragraph">
-                    &emsp; On their own, CLIP embeddings in 3D can be sensitive to floaters and regions with few views.
-                    We additionally optimize a field of DINO features in
-                    3D which passes through the same network backbone, which regularizes the CLIP feautres and leads to
-                    qualitatively better object and foreground-background boundaries.
-                    This regularization is inspired by <a
-                        href="https://pfnet-research.github.io/distilled-feature-fields/">Distilled Feature Fields
-                        (DFF)</a>, which distilled
-                    DINO features into 3D and showed they could segment objects in 3D given input images.
+                    Inspired by <a href="https://pfnet-research.github.io/distilled-feature-fields/">Distilled Feature Fields (DFF)</a>,
+                    we use <a href="https://dino-vit-features.github.io/">DINO</a> features to regularize CLIP features. 
+                    This leads to qualitative improvements in object boundaries, as 
+                    CLIP embeddings in 3D can be sensitive to floaters and regions with few views.
                 </p>
             </div>
 
             <img id="main-img" src="data/dino_compare.jpg" />
-
-
-            <!-- <div class="base-row">
-                <h1 id="abstract">Benefits of using CLIP 0-shot</h1>
-                <p class="paragraph">
-                    &emsp; LERF uses CLIP <b>out-of-the-box</b> without mask proposals or networks trained on
-                    segmentation datasets.
-                    As a result, it can support a broad range of query types, including <b><span
-                            style="color:cornflowerblue">multi-scale</span>, <span
-                            style="color:darkgoldenrod">abstract</span>,
-                        <span style="color:rgb(255, 221, 0)">visual</span>, <span style="color:pink">long-tail</span>,
-                        and <span style="color:grey">text-based</span></b>.
-                    
-
-
-                </p>
-            </div>
-            <img id="splash-img" src="data/splash.jpg" />
-            <div class="base-row">
-                <p class="paragraph">
-                    We compare language embeddings in 3D to <a
-                        href="https://sites.google.com/site/boyilics/website-builder/language-driven-semantic-segmentation">LSeg</a>,
-                    a popular fine-tuned open-vocab detector which outputs pixel-aligned CLIP vectors.
-                    We embed these pixel-aligned features from LSeg into 3D as proposed in <a
-                        href="https://pfnet-research.github.io/distilled-feature-fields/">DFF</a>. Outputs from LSeg
-                    struggle on
-                    queries which are out-of-distribution to its training set, while because LERF can cope with much
-                    more diverse queries.
-                </p>
-            </div>
-
-            <img id="main-img" src="data/lseg_compare.jpg" /> -->
-
-
-
 
             <div class="base-row">
                 <img src="data/nerfstudio_logo.png" alt="Nerfstudio" style="height: 5em; margin-top:2em" />
@@ -284,47 +253,17 @@
                     Integration Coming Soon...
                 </h1>
                 <p class="paragraph">
-                    &emsp; We're excited about what people create with natural language NeRF interaction, and will
-                    publicize code inside the popular research
-                    codebase <a href="https://github.com/nerfstudio-project/nerfstudio/">Nerfstudio</a>. This video
-                    shows a user typing in queries and visualizing results
-                    from a trained LERF in real-time.
+                    LERF will be integrated into the popular research codebase <a
+                        href="https://github.com/nerfstudio-project/nerfstudio/">Nerfstudio</a>! This video
+                    <!-- , and will -->
+                    <!-- publicize code inside the popular research -->
+                    <!-- codebase <a href="https://github.com/nerfstudio-project/nerfstudio/">Nerfstudio</a>. This video -->
+                    shows a user typing in queries and visualizing results from a trained LERF in real-time. 
+                    We're excited about what people will create with natural language NeRF interaction :)
 
                 </p>
             </div>
             <video id="main-video" muted loop controls>
                 <source id="mp4" src="data/lerf_interaction.mp4" type="video/mp4">
             </video>
-
-            <!-- <div class="base-row">
-                <h1 id="abstract">3D Relevancy Queries</h1>
-                <p class="paragraph">
-                    &emsp; To query LERF, we assign a relevancy score between 0 and 1 to each rendered CLIP embedding
-                    given a text query.
-                    To do this, we compute similarity between the rendered CLIP embeddings with a set of negative phrase
-                    embeddings as well as the query embedding.
-                    Relevancy score is then the softmax over these similarities. We use the same 4 negative prompts for
-                    all renders: "things", "object", "stuff", "texture".
-                    We visualize relevancy maps by discarding pixels with score below 0.5, and normalize heatmaps across
-                    videos or images to the maximum value.
-                </p>
-            </div> -->
-
-            <div class="base-row">
-                <h1 id="abstract">Limitations </h1>
-                <p class="paragraph">
-                    &emsp; LERF inherits limitations from CLIP...
-
-                </p>
-
-                    <img id="main-img" src="data/clip_ambiguity.jpg" />
-
-                    <!-- <img id="double-img" src="data/bagofwords.jpg" style="width:30%" />
-                    <img id="double-img" src="data/poor_geometry.jpg" style="width:47%" />
-                    <img id="double-img" src="data/geometry_separation.jpg" style="width:37%" />
-                    <img id="double-img" src="data/prompt_tuning.jpg" style="width:50%" /> -->
-
-
-
-            </div>
 </body>

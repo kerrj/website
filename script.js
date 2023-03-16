@@ -1,6 +1,13 @@
 
-var video_names = ['bouquet','figurines','kitchen', 'donuts', 'teatime'];
-var download_paths = ['data/bouquet.mp4','data/figurines.mp4','data/bouquet.mp4', 'data/kitchen.mp4', 'data/teatime.mp4'];
+var video_names = ['bouquet','figurines','kitchen', 'donuts', 'teatime', 'bookstore'];
+var download_paths = [
+  'data/high_res/bouquet.mp4',
+  'data/high_res/figurines.mp4',
+  'data/high_res/bouquet.mp4', 
+  'data/high_res/kitchen.mp4', 
+  'data/high_res/teatime.mp4',
+  'data/high_res/bookstore.mp4'
+];
 var videos = [];
 
 var video_width = 960;
@@ -18,6 +25,7 @@ $(function() {
       document.getElementById('thumb-2'),
       document.getElementById('thumb-3'),
       document.getElementById('thumb-4'),
+      document.getElementById('thumb-5'),
     ];
     for (var i = 0; i < thumbnails.length; i++) {
       thumbnails[i].addEventListener('click', change_video_index.bind(this, i));
