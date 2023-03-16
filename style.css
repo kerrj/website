@@ -324,6 +324,7 @@ body {
 .videos {
     visibility: hidden;
     position: absolute;
+    width: 1%;
 }
 
 #opacity {
