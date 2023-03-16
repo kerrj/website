@@ -1,1 +1,336 @@
-<h1>Hello world!</h1>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>LERF: Language Embedded Radiance Fields</title>
+
+    <!-- TODO: update meta content -->
+    <meta content="TODO: a description" name="description" />
+    <meta content="LERF: Language Embedded Radiance Fields" property="og:title" />
+    <meta content="TODO: a description" property="og:description" />
+    <meta content="http://www. TODO iamge com" property="og:image" />
+    <meta content="LERF: Language Embedded Radiance Fields" property="twitter:title" />
+    <meta content="TODO: a description" property="twitter:description" />
+    <meta content="http:// TODO image" property="twitter:image" />
+    <meta property="og:type" content="website" />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous" />
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+    <script
+        type="text/javascript">WebFont.load({ google: { families: ["Lato:100,100italic,300,300italic,400,400italic,700,700italic,900,900italic", "Montserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic", "Ubuntu:300,300italic,400,400italic,500,500italic,700,700italic", "Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic", "Changa One:400,400italic", "Varela Round:400", "Bungee Shade:regular", "Roboto:300,regular,500", "Bungee Outline:regular"] } });</script>
+    <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif]-->
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="script.js" type="text/javascript"></script>
+
+    <link href="style.css" rel="stylesheet" type="text/css" />
+
+    <link href="data/favicon.png" rel="shortcut icon" type="image/x-icon" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- TODO: update analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-51T1ZNPMZT"></script>
+    <script
+        type="text/javascript">window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-51T1ZNPMZT', { 'anonymize_ip': false });</script>
+</head>
+
+<body>
+    <div class="section">
+        <div class="container">
+            <h1 class="title">LERF</h1>
+            <h1 class="subheader">Language Embedded Radiance Fields</h1>
+            
+            <div class="base-row author-row">
+                <div class="base-col author-col">
+                    <a href="https://kerrj.github.io/" target="_blank" class="author-text">
+                        Justin Kerr
+                        <span class="text-star">*</span>
+                    </a>
+                </div>
+                <div class="base-col author-col">
+                    <a href="https://scholar.google.com/citations?user=ODr5lMgAAAAJ&hl=en" target="_blank"
+                        class="author-text">
+                        Chung Min Kim
+                        <span class="text-star">*</span>
+                    </a>
+                </div>
+                <div class="base-col author-col">
+                    <a href="https://goldberg.berkeley.edu/" target="_blank" class="author-text">
+                        Ken Goldberg
+                    </a>
+                </div>
+                <div class="base-col author-col">
+                    <a href="https://people.eecs.berkeley.edu/~kanazawa/" target="_blank" class="author-text">
+                        Angjoo Kanazawa
+                        <span class="superscript"></span>
+                    </a>
+                </div>
+                <div class="base-col author-col">
+                    <a href="https://www.matthewtancik.com" target="_blank" class="author-text">
+                        Matthew Tancik
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h1 id="uc-berkeley">UC Berkeley</h1>
+                <br />
+                <div id="equal_contrib">
+                    <span class="text-star">*</span>Denotes Equal Contribution
+                </div>
+            </div>
+            <div class="link-labels base-row">
+                <!-- TODO: Update arxiv link -->
+                <div class="base-col icon-col"><a href="https://arxiv.org/" class="link-block"><img
+                            src="https://uploads-ssl.webflow.com/51e0d73d83d06baa7a00000f/5cab99df4998decfbf9e218e_paper-01.png"
+                            alt="paper"
+                            sizes="(max-width: 479px) 12vw, (max-width: 767px) 7vw, (max-width: 991px) 41.8515625px, 56.6953125px"
+                            srcset="https://uploads-ssl.webflow.com/51e0d73d83d06baa7a00000f/5cab99df4998decfbf9e218e_paper-01-p-500.png 500w, https://uploads-ssl.webflow.com/51e0d73d83d06baa7a00000f/5cab99df4998decfbf9e218e_paper-01.png 672w"
+                            class="icon-img" /></a></div>
+                <!-- TODO: Update code link -->
+                <div class="base-col icon-col"><a href="https://github.com/" target="_blank" class="link-block"><img
+                            src="https://uploads-ssl.webflow.com/51e0d73d83d06baa7a00000f/5cae3b53b42ebb3dd4175a82_68747470733a2f2f7777772e69636f6e66696e6465722e636f6d2f646174612f69636f6e732f6f637469636f6e732f313032342f6d61726b2d6769746875622d3235362e706e67.png"
+                            alt="paper" class="icon-img github-img-icon" /></a></div>
+                <!-- TODO: Update data link -->
+                <div class="column-2 base-col icon-col"><a href="https://drive.google.com/drive/" target="_blank"
+                        class="link-block"><img
+                            src="https://uploads-ssl.webflow.com/51e0d73d83d06baa7a00000f/5e7136849ee3b0a0c6a95151_database.svg"
+                            alt="paper" class="icon-img data-img-icon" /></a></div>
+            </div>
+            <div class="link-labels base-row">
+                <div class="base-col icon-col">
+                    <strong class="link-labels-text">Paper</strong>
+                </div>
+                <div class="base-col icon-col">
+                    <strong class="link-labels-text">&lt;/Code&gt;</strong>
+                </div>
+                <div class="base-col icon-col">
+                    <strong class="link-labels-text">Data</strong>
+                </div>
+            </div>
+            <h1 class="tldr">
+                <b>TL;DR</b>: 
+                <!-- LERFs ground language embeddings from off-the-shelf models like CLIP into a NeRF, which enables open-ended language queries in 3D. -->
+                Grounding CLIP vectors volumetrically inside a NeRF allows flexible natural language queries
+                <!-- Enable natural language queries within a NeRF by densely embedding CLIP vectors inside -->
+        </h1>
+            <video id="main-video" autobuffer muted autoplay loop controls>
+                <source id="mp4" src="data/teaser.mp4" type="video/mp4">
+            </video>
+
+
+
+            <div class="base-row">
+                <h1 id="abstract">Overview</h1>
+                <p class="paragraph">
+                    &emsp;
+                    LERF learns a dense, multiscale language field by volume rendering CLIP
+                    embeddings along training rays,
+                    supervising these embeddings across training views to provide multi-view consistency. After
+                    optimization,
+                    LERF can extract 3D relevancy maps for a broad range of language prompts interactively in real-time.
+                    LERF enables <b>pixel-aligned</b> queries of the distilled 3D CLIP embeddings <b>without relying on
+                        region proposals, masks, or fine-tuning</b>,
+                    supporting long-tail open-vocabulary queries hierarchically across the volume.
+                    <!-- Language Embedded Radiance Fields
+                     (LERFs) are a method for grounding language embeddings from off-the-shelf models like CLIP into NeRF, which enable open-ended
+                      language queries in 3D. LERF learns a dense, multiscale language field by volume rendering CLIP embeddings along training rays, 
+                      supervising these embeddings across training views to provide multi-view consistency. After optimization, 
+                      LERF can extract 3D relevancy maps for a broad range of language prompts interactively in real-time. LERF enables <b>pixel-aligned</b> queries of the distilled 3D CLIP embeddings without relying on region proposals, masks, or fine-tuning, 
+                      supporting long-tail open-vocabulary queries hierarchically across the volume -->
+                </p>
+            </div>
+
+            <video id="bouquet" src="data/playback/bouquet_concat.mp4" style="display: none" controls="false" loop
+                autoplay muted></video>
+            <video id="figurines" src="data/playback/figurines_concat.mp4" style="display: none" controls="false" loop
+                muted></video>
+            <video id="kitchen" src="data/playback/kitchen_concat.mp4" style="display: none" controls="false" loop
+                muted></video>
+            <video id="donuts" src="data/playback/donuts_concat.mp4" style="display: none" controls="false" loop
+                muted></video>
+            <video id="teatime" src="data/playback/teatime_concat.mp4" style="display: none" controls="false" loop
+                muted></video>
+            <video id="video-toycar2" src="https://dorverbin.github.io/refnerf/video/toycar.mp4" style="display: none"
+                controls="false" autoplay loop muted></video>
+
+
+
+
+            <div id="main-results" onclick="play_pause()">
+                <canvas id="canvas" width="960px" height="540px"></canvas>
+                <canvas id="canvas-overlay" width="960px" height="540px"></canvas>
+            </div>
+
+            <div class="video-bar">
+                <div id="opacity-col" class="base-col viewer-bar">
+                    <label class="switch">
+                        <input type="checkbox" id="opacity-toggle" checked>
+                        <span class="slider"></span>
+                        <span class="labels" data-on="ON" data-off="OFF"></span>
+                    </label>
+                </div>
+                <div class="base-col viewer-bar">
+                    <button id="play-btn" class="video-btn fa fa-lg fa-pause" onclick="play_pause()"></button>
+                </div>
+                <div class="base-col viewer-bar video-export">
+                    <button class="video-btn fa fa-arrows-alt fa-lg" onclick="fullscreen()"></button>
+                    <button class="video-btn fa fa-download fa-lg" onclick="download()"></button>
+                </div>
+            </div>
+
+            <div class="base-row thumbnail-row">
+                <div class="base-col thumbnail-col">
+                    <button class="thumbnail-btn" id="thumb-0">
+                        <img src="data/thumbnails/bouquet_thumbnail.jpg" alt="paper" class="thumbnails" />
+                        Bouquet
+                    </button>
+                </div>
+                <div class="base-col thumbnail-col">
+                    <button class="thumbnail-btn" id="thumb-1">
+                        <img src="data/thumbnails/figurines_thumbnail.jpg" alt="paper" class="thumbnails" />
+                        Figurines
+                    </button>
+                </div>
+                <div class="base-col thumbnail-col">
+                    <button class="thumbnail-btn" id="thumb-2">
+                        <img src="data/thumbnails/kitchen_thumbnail.jpg" alt="paper" class="thumbnails" />
+                        Kitchen
+                    </button>
+                </div>
+                <div class="base-col thumbnail-col">
+                    <button class="thumbnail-btn" id="thumb-3">
+                        <img src="data/thumbnails/donuts_thumbnail.jpg" alt="paper" class="thumbnails" />
+                        Donuts
+                    </button>
+                </div>
+                <div class="base-col thumbnail-col">
+                    <button class="thumbnail-btn" id="thumb-4">
+                        <img src="data/thumbnails/teatime_thumbnail.jpg" alt="paper" class="thumbnails" />
+                        Teatime
+                    </button>
+                </div>
+            </div>
+
+            <div id="main-results" onclick="play_pause()">
+                <canvas id="canvas"></canvas>
+                <canvas id="canvas-overlay"></canvas>
+            </div>
+            <img id="pipeline-img" src="data/nerf_render.svg" />
+
+            <div class="base-row">
+                <h1 id="abstract">Multi-scale supervision</h1>
+                <p class="paragraph">
+                    &emsp; To supervise language embeddings, we pre-compute an image pyramids of CLIP features for each
+                    training view.
+                    Then, each sampled ray during optimization is supervised by interpolating the CLIP embedding within
+                    this pyramid.
+                </p>
+            </div>
+
+            <img id="clip-img" src="data/clip_features.svg" />
+            <img id="main-img" src="data/multi_scale_compare.jpg" />
+            <div class="base-row">
+                <h1 id="abstract">DINO Regularization</h1>
+                <p class="paragraph">
+                    &emsp; On their own, CLIP embeddings in 3D can be sensitive to floaters and regions with few views.
+                    We additionally optimize a field of DINO features in
+                    3D which passes through the same network backbone, which regularizes the CLIP feautres and leads to
+                    qualitatively better object and foreground-background boundaries.
+                    This regularization is inspired by <a
+                        href="https://pfnet-research.github.io/distilled-feature-fields/">Distilled Feature Fields
+                        (DFF)</a>, which distilled
+                    DINO features into 3D and showed they could segment objects in 3D given input images.
+                </p>
+            </div>
+
+            <img id="main-img" src="data/dino_compare.jpg" />
+
+
+            <!-- <div class="base-row">
+                <h1 id="abstract">Benefits of using CLIP 0-shot</h1>
+                <p class="paragraph">
+                    &emsp; LERF uses CLIP <b>out-of-the-box</b> without mask proposals or networks trained on
+                    segmentation datasets.
+                    As a result, it can support a broad range of query types, including <b><span
+                            style="color:cornflowerblue">multi-scale</span>, <span
+                            style="color:darkgoldenrod">abstract</span>,
+                        <span style="color:rgb(255, 221, 0)">visual</span>, <span style="color:pink">long-tail</span>,
+                        and <span style="color:grey">text-based</span></b>.
+                    
+
+
+                </p>
+            </div>
+            <img id="splash-img" src="data/splash.jpg" />
+            <div class="base-row">
+                <p class="paragraph">
+                    We compare language embeddings in 3D to <a
+                        href="https://sites.google.com/site/boyilics/website-builder/language-driven-semantic-segmentation">LSeg</a>,
+                    a popular fine-tuned open-vocab detector which outputs pixel-aligned CLIP vectors.
+                    We embed these pixel-aligned features from LSeg into 3D as proposed in <a
+                        href="https://pfnet-research.github.io/distilled-feature-fields/">DFF</a>. Outputs from LSeg
+                    struggle on
+                    queries which are out-of-distribution to its training set, while because LERF can cope with much
+                    more diverse queries.
+                </p>
+            </div>
+
+            <img id="main-img" src="data/lseg_compare.jpg" /> -->
+
+
+
+
+            <div class="base-row">
+                <img src="data/nerfstudio_logo.png" alt="Nerfstudio" style="height: 5em; margin-top:2em" />
+                <h1 id="abstract">
+                    Integration Coming Soon...
+                </h1>
+                <p class="paragraph">
+                    &emsp; We're excited about what people create with natural language NeRF interaction, and will
+                    publicize code inside the popular research
+                    codebase <a href="https://github.com/nerfstudio-project/nerfstudio/">Nerfstudio</a>. This video
+                    shows a user typing in queries and visualizing results
+                    from a trained LERF in real-time.
+
+                </p>
+            </div>
+            <video id="main-video" muted loop controls>
+                <source id="mp4" src="data/lerf_interaction.mp4" type="video/mp4">
+            </video>
+
+            <!-- <div class="base-row">
+                <h1 id="abstract">3D Relevancy Queries</h1>
+                <p class="paragraph">
+                    &emsp; To query LERF, we assign a relevancy score between 0 and 1 to each rendered CLIP embedding
+                    given a text query.
+                    To do this, we compute similarity between the rendered CLIP embeddings with a set of negative phrase
+                    embeddings as well as the query embedding.
+                    Relevancy score is then the softmax over these similarities. We use the same 4 negative prompts for
+                    all renders: "things", "object", "stuff", "texture".
+                    We visualize relevancy maps by discarding pixels with score below 0.5, and normalize heatmaps across
+                    videos or images to the maximum value.
+                </p>
+            </div> -->
+
+            <div class="base-row">
+                <h1 id="abstract">Limitations </h1>
+                <p class="paragraph">
+                    &emsp; LERF inherits limitations from CLIP...
+
+                </p>
+
+                    <img id="main-img" src="data/clip_ambiguity.jpg" />
+
+                    <!-- <img id="double-img" src="data/bagofwords.jpg" style="width:30%" />
+                    <img id="double-img" src="data/poor_geometry.jpg" style="width:47%" />
+                    <img id="double-img" src="data/geometry_separation.jpg" style="width:37%" />
+                    <img id="double-img" src="data/prompt_tuning.jpg" style="width:50%" /> -->
+
+
+
+            </div>
+</body>
