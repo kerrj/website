@@ -269,11 +269,14 @@ body {
 }
 
 .thumbnail-row {
-    height: 100px;
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
 }
 
 .thumbnail-col {
-    width: 16.66%;
+    width: 22%;
+    flex: 1 0 22%;
 }
 
 :root {
@@ -303,7 +306,7 @@ body {
 #main-results {
     width: 100%;
     margin-top: 30px;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     text-align: center;
     background-color: white;
     border-radius: 15px;
@@ -491,3 +494,42 @@ input:checked + .slider:before {
     margin-left: 10px;
     overflow-y: scroll;
 }
+
+.slide-arrow {
+    display: flex;
+    top: 0;
+    bottom: 0;
+    margin-top: 35px;
+    height: 4rem;
+    background-color: #6dbdff;
+    ;
+    border: none;
+    width: 2rem;
+    font-size: 3rem;
+    padding: 0;
+    cursor: pointer;
+    opacity: 1.0;
+    transition: color 100ms;
+  }
+  
+  .slide-arrow:hover,
+  .slide-arrow:focus {
+    background-color: #2196F3;
+    opacity: 1;
+  }
+  
+  #slide-arrow-prev {
+    float: left;
+    left: 0;
+    margin-right: 5px;
+    padding-left: .45rem;
+    border-radius: 2rem 2rem 2rem 2rem;
+  }
+  
+  #slide-arrow-next {
+    float: right;
+    right: 0;
+    margin-left: 5px;
+    padding-left: .55rem;
+    border-radius: 2rem 2rem 2rem 2rem;
+  }

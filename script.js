@@ -1,11 +1,14 @@
 
-var video_names = ['bouquet','figurines','kitchen', 'donuts', 'teatime', 'bookstore'];
+var video_names = ['bouquet','figurines','kitchen', 'donuts', 'teatime', 'bookstore', 'grocery', 'garden', 'shoes'];
 var download_paths = [
   'data/high_res/bouquet.mp4',
   'data/high_res/figurines.mp4',
   'data/high_res/kitchen.mp4', 
   'data/high_res/donuts.mp4', 
   'data/high_res/teatime.mp4',
+  'data/high_res/bookstore.mp4',
+  'data/high_res/bookstore.mp4', // TODO UPDATE!
+  'data/high_res/bookstore.mp4',
   'data/high_res/bookstore.mp4'
 ];
 var videos = [];
@@ -26,6 +29,9 @@ $(function() {
       document.getElementById('thumb-3'),
       document.getElementById('thumb-4'),
       document.getElementById('thumb-5'),
+      document.getElementById('thumb-6'),
+      document.getElementById('thumb-7'),
+      document.getElementById('thumb-8'),
     ];
     for (var i = 0; i < thumbnails.length; i++) {
       thumbnails[i].addEventListener('click', change_video_index.bind(this, i));
@@ -195,3 +201,14 @@ window.onload = function() {
 }
 
 window.addEventListener('resize', resize_canvas, false);
+
+function slide_left() {
+  slider_window = document.getElementById('thumbnails-scroll');
+  slider_window.scrollLeft = 0;
+}
+
+function slide_right() {
+  slider_window = document.getElementById('thumbnails-scroll');
+  slider_window.scrollLeft += 1000;
+}
+
