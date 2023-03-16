@@ -63,14 +63,13 @@ function change_video_index (idx) {
 
 function fullscreen() {
   current_video = videos[current_video_idx]
-  current_video.style.display = "block";
+  current_video.style.visibility = "visible";
   const fullscreenElement =
     document.fullscreenElement ||
     document.mozFullScreenElement ||
     document.webkitFullscreenElement ||
     document.msFullscreenElement;
   if (fullscreenElement) {
-    console.log("HERERS")
     exitFullscreen();
   } else {
     launchIntoFullscreen(current_video);
@@ -122,7 +121,7 @@ function exitHandler()
  if (!document.webkitIsFullScreen && !document.mozFullScreen && !document.msFullscreenElement)
  {
   current_video = videos[current_video_idx]
-  current_video.style.display = "none";
+  current_video.style.visibility = "hidden";
  }
 }
 
@@ -193,7 +192,6 @@ window.onload = function() {
 
   change_video_index(0);
   videos[0].play();
-  console.log(videos[0].paused)
 }
 
 window.addEventListener('resize', resize_canvas, false);
