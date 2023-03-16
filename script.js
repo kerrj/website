@@ -201,13 +201,9 @@ window.onload = function() {
 
   const hoverImage = document.getElementById('hover-image');
   const gptQueries = document.querySelectorAll('.gpt-query');
-  console.log(gptQueries)
 
   gptQueries.forEach(query => {
     query.addEventListener('mouseover', () => {
-      console.log('data/gpt_example/${query.id}.jpg')
-      // const color = query.style.backgroundColor;
-
       hoverImage.src = 'data/gpt_example/' + query.id + '.jpg';
     });
     query.addEventListener('mouseout', () => {
