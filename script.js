@@ -7,7 +7,7 @@ var download_paths = [
   'data/high_res/donuts.mp4', 
   'data/high_res/teatime.mp4',
   'data/high_res/bookstore.mp4',
-  'data/high_res/veggie_aisle.mp4', // TODO UPDATE!
+  'data/high_res/veggie_aisle.mp4',
   'data/high_res/sunnyside.mp4',
   'data/high_res/shoe_rack.mp4'
 ];
