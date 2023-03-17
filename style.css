@@ -48,7 +48,7 @@ body {
     font-family: 'Open Sans',sans-serif;
     color: #333;
     font-size: 18px;
-    line-height: 44px;
+    line-height: 24px;
     font-weight: 500;
     letter-spacing: 0;
 }
@@ -72,7 +72,7 @@ body {
 }
 
 .author-row {
-    height: 20px;
+    height: 25px;
 }
 
 .author-col {
@@ -103,6 +103,25 @@ body {
     font-weight: 400;
     margin: 0px;
     letter-spacing: 0;
+}
+
+@media screen and (max-width: 550px) {
+    .subheader {
+        font-size: 16px;
+    }
+
+    .author-text {
+        font-size: 12px;
+    }
+
+    .author-row {
+        height: 35px;
+    }
+
+    #uc-berkeley {
+        font-size: 12px;
+    }
+
 }
 
 #equal-contrib {
