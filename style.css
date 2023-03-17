@@ -544,6 +544,7 @@ input:checked + .slider:before {
   #gpt-words {
     float: left;
     width:100%;
+    padding-bottom: 15px;
   }
 
   #gpt-img-col {
