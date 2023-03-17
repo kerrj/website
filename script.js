@@ -182,9 +182,6 @@ function resize_canvas() {
 
 window.onload = function() {
   const root = document.documentElement;
-  resize_canvas();
-  
-  const sliderAll = document.getElementById("sliderAll");
   const checkbox = document.getElementById('opacity-toggle')
 
   load_videos();
@@ -214,6 +211,11 @@ window.onload = function() {
 }
 
 window.addEventListener('resize', resize_canvas, false);
+
+document.addEventListener("DOMContentLoaded", function() {
+  resize_canvas();
+});
+
 
 function slide_left() {
   slider_window = document.getElementById('thumbnails-scroll');

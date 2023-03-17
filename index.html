@@ -17,8 +17,7 @@
     <meta content="Grounding CLIP vectors volumetrically inside a NeRF allows flexible natural language queries in 3D"
         name="description" />
     <meta content="LERF: Language Embedded Radiance Fields" property="og:title" />
-    <meta
-        content="LERF optimizes a dense, multi-scale language 3D field by volume rendering CLIP embeddings along training rays, supervising these embeddings with multi-scale CLIP features across multi-view training images. After optimization, LERF can extract 3D relevancy maps for language queries interactively in real-time. LERF enables pixel-aligned queries of the distilled 3D CLIP embeddings without relying on region proposals, masks, or fine-tuning, supporting long-tail open-vocabulary queries hierarchically across the volume."
+    <meta content="Grounding CLIP vectors volumetrically inside a NeRF allows flexible natural language queries in 3D"
         property="og:description" />
     <meta content="http://lerf.io/data/lerf_meta_img.jpg" property="og:image" />
     <meta content="LERF: Language Embedded Radiance Fields" property="twitter:title" />
@@ -202,71 +201,71 @@
                     <canvas id="canvas-overlay"></canvas>
                 </div>
 
-                <button class="slide-arrow" id="slide-arrow-prev" onclick="slide_left()">
-                    &#8249;
-                </button>
-                <button class="slide-arrow" id="slide-arrow-next" onclick="slide_right()">
-                    &#8250;
-                </button>
 
-                <div class="base-row thumbnail-row" , id="thumbnails-scroll">
-                    <div class="base-col thumbnail-col">
-                        <button class="thumbnail-btn" id="thumb-0">
-                            <img src="data/thumbnails/bouquet_thumbnail.jpg" alt="paper" class="thumbnails" />
-                            Bouquet
-                        </button>
+                <div class="base-row" style="display: inline-block">
+                    <button class="slide-arrow" id="slide-arrow-prev" onclick="slide_left()">
+                        &#8249;
+                    </button>
+                    <div class="base-row thumbnail-row" , id="thumbnails-scroll">
+                        <div class="base-col thumbnail-col">
+                            <button class="thumbnail-btn" id="thumb-0">
+                                <img src="data/thumbnails/bouquet_thumbnail.jpg" alt="paper" class="thumbnails" />
+                                Bouquet
+                            </button>
+                        </div>
+                        <div class="base-col thumbnail-col">
+                            <button class="thumbnail-btn" id="thumb-1">
+                                <img src="data/thumbnails/figurines_thumbnail.jpg" alt="paper" class="thumbnails" />
+                                Figurines
+                            </button>
+                        </div>
+                        <div class="base-col thumbnail-col">
+                            <button class="thumbnail-btn" id="thumb-2">
+                                <img src="data/thumbnails/kitchen_thumbnail.jpg" alt="paper" class="thumbnails" />
+                                Kitchen
+                            </button>
+                        </div>
+                        <div class="base-col thumbnail-col">
+                            <button class="thumbnail-btn" id="thumb-3">
+                                <img src="data/thumbnails/donuts_thumbnail.jpg" alt="paper" class="thumbnails" />
+                                Donuts
+                            </button>
+                        </div>
+                        <div class="base-col thumbnail-col">
+                            <button class="thumbnail-btn" id="thumb-4">
+                                <img src="data/thumbnails/teatime_thumbnail.jpg" alt="paper" class="thumbnails" />
+                                Teatime
+                            </button>
+                        </div>
+                        <div class="base-col thumbnail-col">
+                            <button class="thumbnail-btn" id="thumb-5">
+                                <img src="data/thumbnails/bookstore_thumbnail.jpg" alt="paper" class="thumbnails" />
+                                Bookstore
+                            </button>
+                        </div>
+                        <div class="base-col thumbnail-col">
+                            <button class="thumbnail-btn" id="thumb-6">
+                                <img src="data/thumbnails/grocery_thumbnail.jpg" alt="paper" class="thumbnails" />
+                                Grocery
+                            </button>
+                        </div>
+                        <div class="base-col thumbnail-col">
+                            <button class="thumbnail-btn" id="thumb-7">
+                                <img src="data/thumbnails/sunnyside_thumbnail.jpg" alt="paper" class="thumbnails" />
+                                Garden
+                            </button>
+                        </div>
+                        <div class="base-col thumbnail-col">
+                            <button class="thumbnail-btn" id="thumb-8">
+                                <img src="data/thumbnails/shoerack_thumbnail.jpg" alt="paper" class="thumbnails" />
+                                Shoes
+                            </button>
+                        </div>
                     </div>
-                    <div class="base-col thumbnail-col">
-                        <button class="thumbnail-btn" id="thumb-1">
-                            <img src="data/thumbnails/figurines_thumbnail.jpg" alt="paper" class="thumbnails" />
-                            Figurines
-                        </button>
-                    </div>
-                    <div class="base-col thumbnail-col">
-                        <button class="thumbnail-btn" id="thumb-2">
-                            <img src="data/thumbnails/kitchen_thumbnail.jpg" alt="paper" class="thumbnails" />
-                            Kitchen
-                        </button>
-                    </div>
-                    <div class="base-col thumbnail-col">
-                        <button class="thumbnail-btn" id="thumb-3">
-                            <img src="data/thumbnails/donuts_thumbnail.jpg" alt="paper" class="thumbnails" />
-                            Donuts
-                        </button>
-                    </div>
-                    <div class="base-col thumbnail-col">
-                        <button class="thumbnail-btn" id="thumb-4">
-                            <img src="data/thumbnails/teatime_thumbnail.jpg" alt="paper" class="thumbnails" />
-                            Teatime
-                        </button>
-                    </div>
-                    <div class="base-col thumbnail-col">
-                        <button class="thumbnail-btn" id="thumb-5">
-                            <img src="data/thumbnails/bookstore_thumbnail.jpg" alt="paper" class="thumbnails" />
-                            Bookstore
-                        </button>
-                    </div>
-                    <div class="base-col thumbnail-col">
-                        <button class="thumbnail-btn" id="thumb-6">
-                            <img src="data/thumbnails/grocery_thumbnail.jpg" alt="paper" class="thumbnails" />
-                            Grocery
-                        </button>
-                    </div>
-                    <div class="base-col thumbnail-col">
-                        <button class="thumbnail-btn" id="thumb-7">
-                            <img src="data/thumbnails/sunnyside_thumbnail.jpg" alt="paper" class="thumbnails" />
-                            Garden
-                        </button>
-                    </div>
-                    <div class="base-col thumbnail-col">
-                        <button class="thumbnail-btn" id="thumb-8">
-                            <img src="data/thumbnails/shoerack_thumbnail.jpg" alt="paper" class="thumbnails" />
-                            Shoes
-                        </button>
-                    </div>
+                    <button class="slide-arrow" id="slide-arrow-next" onclick="slide_right()">
+                        &#8250;
+                    </button>
                 </div>
-
-
 
                 <div id="why-lerf">
                     <h1> Why 3D CLIP embeddings?</h1>
