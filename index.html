@@ -259,6 +259,49 @@
                     </div>
                 </div>
 
+                
+
+                <div id="why-lerf">
+                    <h1> Why 3D CLIP embeddings?</h1>
+                    <p class="paragraph">
+                        With multi-view supervision, 3D CLIP embeddings are more robust to occlusion and
+                        viewpoint
+                        changes than 2D CLIP embeddings.
+                        3D CLIP embeddings also conform better to the 3D scene structure, giving them a crisper
+                        appearance.
+                    </p>
+                    <img id="pipeline-img" src="data/nerf_render.svg" />
+                    <img id="why-lerf-img" src="data/2d-3d-lerf-vert.jpg" />
+                </div>
+
+                <div class="base-row add-top-padding">
+                    <h1>Multi-scale supervision</h1>
+                    <p class="paragraph">
+                        To supervise language embeddings, we pre-compute an image pyramid of CLIP features for each
+                        training view.
+                        Then, each sampled ray during optimization is supervised by interpolating the CLIP embedding
+                        within
+                        this pyramid.
+                    </p>
+                </div>
+
+                <img id="clip-img" src="data/clip_features.svg" />
+                <img id="main-img" src="data/multi_scale_compare.jpg" />
+                <div class="base-row add-top-padding">
+                    <h1 id="abstract">DINO Regularization</h1>
+                    <p class="paragraph">
+                        Inspired by <a href="https://pfnet-research.github.io/distilled-feature-fields/">Distilled
+                            Feature
+                            Fields (DFF)</a>,
+                        we use <a href="https://dino-vit-features.github.io/">DINO</a> features to regularize CLIP
+                        features.
+                        This leads to qualitative improvements in object boundaries, as
+                        CLIP embeddings in 3D can be sensitive to floaters and regions with few views.
+                    </p>
+                </div>
+
+                <img id="main-img" src="data/dino_compare.jpg" />
+
                 <h1 id="abstract">LERF 🤝 ChatGPT</h1>
                 <div class="paragraph">
                     Natural language interaction could allow LLMs to interrogate the 3D world.
@@ -359,47 +402,6 @@
                             drawer</div>
                     </div>
                 </div>
-
-                <div id="why-lerf">
-                    <h1> Why 3D CLIP embeddings?</h1>
-                    <p class="paragraph">
-                        With multi-view supervision, 3D CLIP embeddings are more robust to occlusion and
-                        viewpoint
-                        changes than 2D CLIP embeddings.
-                        3D CLIP embeddings also conform better to the 3D scene structure, giving them a crisper
-                        appearance.
-                    </p>
-                    <img id="pipeline-img" src="data/nerf_render.svg" />
-                    <img id="why-lerf-img" src="data/2d-3d-lerf-vert.jpg" />
-                </div>
-
-                <div class="base-row add-top-padding">
-                    <h1>Multi-scale supervision</h1>
-                    <p class="paragraph">
-                        To supervise language embeddings, we pre-compute an image pyramid of CLIP features for each
-                        training view.
-                        Then, each sampled ray during optimization is supervised by interpolating the CLIP embedding
-                        within
-                        this pyramid.
-                    </p>
-                </div>
-
-                <img id="clip-img" src="data/clip_features.svg" />
-                <img id="main-img" src="data/multi_scale_compare.jpg" />
-                <div class="base-row add-top-padding">
-                    <h1 id="abstract">DINO Regularization</h1>
-                    <p class="paragraph">
-                        Inspired by <a href="https://pfnet-research.github.io/distilled-feature-fields/">Distilled
-                            Feature
-                            Fields (DFF)</a>,
-                        we use <a href="https://dino-vit-features.github.io/">DINO</a> features to regularize CLIP
-                        features.
-                        This leads to qualitative improvements in object boundaries, as
-                        CLIP embeddings in 3D can be sensitive to floaters and regions with few views.
-                    </p>
-                </div>
-
-                <img id="main-img" src="data/dino_compare.jpg" />
 
                 <div class="base-row add-top-padding">
                     <img src="data/nerfstudio_logo.png" alt="Nerfstudio" style="height: 5em; margin-top:2em" />
